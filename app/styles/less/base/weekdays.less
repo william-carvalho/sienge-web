@@ -1,0 +1,25 @@
+.weekdays {
+  text-align: center;
+  font-size: 13px;
+
+  .day {
+    background: @brand-gray-5;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 3px;
+
+    &.__holiday {
+      background: @brand-gray-6;
+    }
+
+    &.__current_day {
+      background: @brand-orange;
+      box-shadow: 0 0 1px 1px @brand-orange;
+      z-index: 9;
+      position: relative;
+    }
+
+  }
+
+}

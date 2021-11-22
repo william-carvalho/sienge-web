@@ -1,0 +1,58 @@
+<div class="crud_add __hidden" data-id="{{client_id}}">
+  <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h1 class="m-n font-thin h3 text-black">{{'GENERIC_SAVE' | translate}} / {{'GENERIC_EDIT' | translate}}</h1>
+        <small class="text-muted">{{'GENERIC_INFO' | translate}}</small>
+      </div>
+    </div>
+    <div class="close-action" ng-click="hideAdd()">
+      {{'ACTION_CLOSE' | translate}}
+      <a class="btn btn-md btn-bg btn-rounded btn-default btn-icon"><i class="glyphicon glyphicon-remove icon"></i></a>
+    </div>
+  </div>
+  <div data-ng-include=" 'views/crud/partial.status_msg.html' "></div>
+  <div class="app-content-body">
+
+    
+
+    <form class="content-form form-group" name="clientForm" novalidate action="index.html" method="post">
+      <div class="form-data row">
+
+		<div class="form-group col-sm-12">
+          <label class="col-sm-12 control-label" for="descricao"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'GENERIC_DESCRIPTION' | translate}}</label>
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="descricao" ng-model="newtipoveiculo.descricao" ng-maxlength="255">
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="col-sm-12 control-label" for="name"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'COST_PRICE' | translate}}</label>
+          <div class="col-sm-10">
+            <input type="number" step="0.01" class="form-control" id="custo" name="custo" ng-model="newtipoveiculo.custo" ng-minlength="0"
+                   ng-maxlength="255" ng-required="true">
+            <div class="field-message" ng-class="{'has-error': clientForm.custo.$invalid}"
+                 ng-messages="clientForm.custo.$error" ng-if='clientForm.custo.$dirty' ng-cloak>
+              <div ng-message="required">{{'ACTION_REQUIRED' | translate}}</div>
+              <div ng-message="minlength">{{'ACTION_REQUIRED_MINIMUM_CHARACTERS' | translate}}</div>
+              <div ng-message="maxlength">{{'ACTION_REQUIRED_MAXIMUM_CHARACTERS' | translate}}</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="overlayer-actions">
+        <div class="btn btn-default btn-delete __btn_pink" ng-click="showexclusionmodal()">
+          <a><span>{{'ACTION_REMOVE' | translate}}</span></a>
+        </div>
+        <div class="btn btn-default btn-save-edit" ng-disabled="clientForm.$invalid" ng-click="saveTipoVeiculo()">
+          <a><span>{{'ACTION_SAVE' | translate}}</span></a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>

@@ -1,0 +1,120 @@
+.sidebar_clocking_info {
+    color: white;
+    border: none;
+
+    &.__top.__sidebar {
+        .panel-heading {
+            //padding-bottom: 0;
+            padding-right: 15px;
+        }
+    }
+
+    .panel-heading {
+        background-color: @brand-green-light;
+        border-bottom-color: @brand-green;
+
+        color: white;
+
+        .title_content {
+            //vertical-align: -webkit-baseline-middle;
+        }
+        .icon {
+            padding-left: 0;
+            padding:  0 8px 0 0;
+        }
+
+        .status-label{
+            vertical-align: -webkit-baseline-middle;
+            padding-top: 9px;
+            //padding-right: 30px;
+            display: inline-block;
+            color: @brand-green-lighter-3;
+        }
+    }
+
+
+    .panel-body {
+        background: @brand-green;
+    }
+
+
+
+    .profile {
+        position: relative;
+        padding: 10px 20px;
+
+        &:after {
+            content: "";
+            border-bottom: 1px solid #09AB99;
+            width: 300px;
+            position: absolute;
+            top: 100%;
+            right: calc(~" 50% - 150px ");
+        }
+        .profile-pic {
+            width: 45px;
+        }
+    }
+
+
+
+    .avatar {
+        border: none;
+        // border: 2px solid @brand-green-lighter-2;
+    }
+
+    .info {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: 1.1em;
+        display: inline-block;
+    }
+
+    .timing {
+        display: inline-block;
+    }
+
+    .clocking-inconsistency {
+        padding: 10px 20px;
+    }
+
+    .clocking-inconsistency-list {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .notice {
+
+        span {
+            color: @brand-green-lighter;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        &.__big{
+            font-size: 1.1em;
+        }
+
+        &.__center{
+            text-align: center;
+        }
+    }
+
+    .date {
+        border-right: 1px solid @brand-green-light;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        a:hover {
+            color: @brand-green-lighter;
+            font-weight: bold;
+        }
+    }
+
+}

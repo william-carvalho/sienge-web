@@ -1,0 +1,101 @@
+<div class="crud_add __hidden" data-id="{{client_id}}">
+  <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h1 class="m-n font-thin h3 text-black">{{'CLIENT_SAVE' | translate}} / {{'CLIENT_EDIT' | translate}}</h1>
+        <small class="text-muted">{{'CLIENT_INFO' | translate}}</small>
+      </div>
+    </div>
+    <div class="close-action" ng-click="hideAdd()">
+      {{'ACTION_CLOSE' | translate}}
+      <a class="btn btn-md btn-bg btn-rounded btn-default btn-icon"><i class="glyphicon glyphicon-remove icon"></i></a>
+    </div>
+  </div>
+  <div data-ng-include=" 'views/crud/partial.status_msg.html' "></div>
+  <div class="app-content-body">
+
+    <div class="content-body-header" data-ng-include=" 'views/crud/partial.crud_add_header.html' "></div>
+
+    <form class="content-form form-group" name="clientForm" novalidate action="index.html" method="post">
+      <div class="form-data row">
+		
+		<div class="form-group col-sm-12">
+          <label class="col-sm-12 control-label" for="externalId"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'CLIENT_EXTERNAL_ID' | translate}}</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="externalId" ng-model="newclient.externalId" ng-maxlength="20">
+          </div>
+        </div>
+		
+        <div class="form-group col-sm-12">
+          <label class="col-sm-12 control-label" for="name"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'CLIENT_NAME' | translate}}</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" ng-model="newclient.name" ng-minlength="0"
+                   ng-maxlength="255" ng-required="true">
+            <div class="field-message" ng-class="{'has-error': clientForm.companyName.$invalid}"
+                 ng-messages="clientForm.name.$error" ng-if='clientForm.name.$dirty' ng-cloak>
+              <div ng-message="required">{{'ACTION_REQUIRED' | translate}}</div>
+              <div ng-message="minlength">{{'ACTION_REQUIRED_MINIMUM_CHARACTERS' | translate}}</div>
+              <div ng-message="maxlength">{{'ACTION_REQUIRED_MAXIMUM_CHARACTERS' | translate}}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label class="col-sm-12 control-label" for="startSla"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'CLIENT_START_SLA' | translate}}</label>
+          <div class="col-sm-12">
+            <input type="number" class="form-control" id="startSla" ng-model="newclient.startSla" min="0">
+          </div>
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label class="col-sm-12 control-label" for="finishSla"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'CLIENT_FINISH_SLA' | translate}}</label>
+          <div class="col-sm-12">
+            <input type="number" class="form-control" id="finishSla" ng-model="newclient.finishSla" min="0">
+          </div>
+        </div>
+
+        <div class="form-group col-sm-12">
+          <label class="col-sm-12 control-label" for="active"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'CLIENT_ACTIVE' | translate}}</label>
+          <div class="col-sm-12">
+            <div class="form-inline">
+              <div class="control-group">
+                <div class="radio">
+                  <label class="checkbox i-checks m-l-md m-b-md">
+                    <input type="radio" name="optradio" ng-model="newclient.active" ng-value="true"
+                           ng-required="!newclient.active">
+                    <i></i>
+                    {{'ACTIVE' | translate}}
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="checkbox i-checks m-l-md m-b-md">
+                    <input type="radio" name="optradio" ng-model="newclient.active" ng-value="false"
+                           ng-required="!newclient.active">
+                    <i></i>
+                    {{'INACTIVE' | translate}}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="overlayer-actions">
+        <div class="btn btn-default btn-delete __btn_pink" ng-click="showexclusionmodal()">
+          <a><span>{{'ACTION_REMOVE' | translate}}</span></a>
+        </div>
+        <div class="btn btn-default btn-save-edit" ng-disabled="clientForm.$invalid" ng-click="saveClient()">
+          <a><span>{{'ACTION_SAVE' | translate}}</span></a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>

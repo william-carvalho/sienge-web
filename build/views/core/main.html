@@ -1,0 +1,11 @@
+<!--[if lt IE 9]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- HEADER -->
+<!--<core-header class="app-header navbar"></core-header>-->
+<!-- MENU -->
+<!--<div data-ng-include="'views/core/aside.html'" class="app-aside hidden-xs"></div>-->
+<!-- MAIN -->
+<div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" data-ui-view></div>
+<!-- FOOTER -->
+<core-footer></core-footer>

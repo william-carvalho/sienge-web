@@ -1,0 +1,163 @@
+.send-list-wrapper{
+
+  .send-search-input {
+    display: none;
+    height: 50px;
+    .input-group{
+      width: 500px;
+    }
+  }
+
+  .send-list {
+
+    padding: 0;
+
+    &.__list_left {
+
+      .list-body {
+        border-left: 0;
+      }
+
+    }
+    &.__list_right {
+
+      .list-item{
+        border-right: 0
+      }
+    }
+
+    .list-heading {
+      padding: 10px 15px;
+      color: @brand-gray-7;
+
+      .checkbox {
+        margin: 0;
+        margin-right: 15px;
+      }
+    }
+
+    .list-body {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid @brand-gray-3;
+      border-left: 1px solid @brand-gray-3;
+
+    }
+
+    .list-item {
+      padding: 3px 0;
+      border-bottom: 1px solid #e2e3eb;
+      position: relative;
+
+      &.__base {
+        .checkbox-inner {
+          padding: 5px 30px 5px 40px;
+        }
+      }
+
+      &.__base,
+      &.__person {
+
+        .checkbox-inner {
+          display: block;
+        }
+      }
+
+    }
+
+    .check-item {
+      display: none;
+
+      &:checked  {
+        & + .checkbox-inner {
+          background: @brand-gray-2;
+          .fa-check {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .checkbox-inner {
+      display: flex;
+      align-items: center;
+      padding: 10px 30px 10px 40px;
+      height: 60px;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover {
+        background: @brand-gray-1;
+      }
+
+      .avatar {
+        flex-shrink: 0;
+        margin-right: 15px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .fa-check {
+        opacity: 0;
+        color: @brand-success;
+        position: absolute;
+        left: 15px;
+        top: 40%;
+      }
+
+    }
+
+    .next {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      height: 60px;
+      padding: 28px 15px 33px;
+      cursor: pointer;
+
+      &:hover {
+        background: @brand-gray-1;
+      }
+
+      .fa-caret-right {
+        border-radius: 50%;
+        background: @brand-gray-3;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        color: white;
+        padding-left: 2px;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    .client-name {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .base-name {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .base-location {
+      font-size: 0.9em;
+    }
+    .base-address {
+      font-size: 0.9em;
+    }
+    .person-name{
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .person-meta {
+      font-size: 0.9em;
+    }
+
+
+  }
+
+}

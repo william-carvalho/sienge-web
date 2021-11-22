@@ -1,0 +1,110 @@
+.sidebar_clocking_info {
+    border: none;
+
+    .panel-heading{
+        border: none;
+    }
+
+    &.__adjust_multiple {
+
+        .profile-pic {
+            width: 45px;
+        }
+
+        .info {
+            padding-top: 5px;
+        }
+
+        .profile {
+            &:after {
+                content: none;
+            }
+        }
+
+        .txt-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .input-justification {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .btn-justification-list {
+            width: calc(~"100% - 35px");
+        }
+
+        .clocking-inconsistency-list {
+            padding: 10px;
+        }
+
+        .date {
+            color: @brand-green-lighter-3;
+            font-size: 1.2em;
+        }
+
+        .btn-comment {
+            height: 34px;
+            background: @brand-green-light;
+            border: 1px solid white;
+            width: 100%;
+        }
+
+    }
+
+    
+
+    .clocking-adjustment-multiple {
+        padding: 0 20px;
+    }
+
+    .clocking-adjustment-multiple-review {
+        padding: 0 20px;
+    }
+
+    .clocking-btn-list {
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    .btn-time {
+        border: 1px solid @brand-green-light;
+        width: 23%;
+        margin-right: 5px;
+
+        &:hover,
+        &.__active {
+            background: white;
+            color: @brand-green-light;
+        }
+    }
+
+    .input-other-time {
+        width: 23%;
+        padding: 5px 12px;
+        text-align: center;
+        color: black;
+    }
+
+    .other-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        position: absolute;
+        top: -25px;
+    }
+
+    .cause {
+        font-size: 1.2em;
+        color: @brand-green-lighter-3;
+        font-weight: bold;
+    }
+
+    .btn-edit-wrapper {
+        padding: 0 20px;
+    }
+
+}

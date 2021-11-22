@@ -1,0 +1,316 @@
+.replacement{
+
+    .panel-body {
+        padding-left: 40px;
+        padding-right: 50px;
+    }
+
+    .text_content{
+        display: inline-block;
+        min-width: 110px;
+        max-width: 140px;
+        margin: 0;
+    }
+
+    .markers{
+        span{
+            font-weight: bold;
+            font-size: 0.8em;
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            display: inline-block;
+            margin: 3px;
+            border-radius: 3px;
+            color: @brand-blue-dark;
+        }
+    }
+
+    .date {
+        color: @brand-gray-7;
+        font-size: 0.8em;
+    }
+    .name{
+        margin: 0;
+        max-width: 240px;
+        padding: 10px 5px 10px 10px;
+        font-weight: bold;
+        color: @brand-blue-dark;
+        border: 1px solid white;
+        font-size: 16px;
+
+        .icon_circle {
+          display: none;
+          position: relative;
+          top: -5px;
+        }
+
+        &:hover {
+          border: 1px solid @brand-gray-4;
+
+          .icon_circle {
+            display: inline-block;
+          }
+        }
+    }
+    .name_destiny {
+      font-size: 14px;
+      padding-left: 25px;
+    }
+
+    .icon-comment {
+        transition: 0.2s opacity ease;
+    }
+
+    .streamline{
+        font-size: 0.9em;
+
+    }
+    .sl-item{
+        padding-left: 15px;
+        border-left: 1px solid @brand-gray-4;
+        h5{
+            font-weight: bold;
+            color: @brand-blue-dark;
+            margin: 0;
+        }
+        &:after{
+            top: 18px;
+        }
+
+        &.__com{
+            .comment-add-wrapper{
+                display: none;
+
+            }
+        }
+
+
+        .title_content {
+            margin-top: 5px !important;
+        }
+        .text_content {
+            margin: 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 12px;
+            color: @brand-gray-7;
+            line-height: 14px;
+            i {
+                position: absolute;
+                top: 5px;
+                left: 0;
+                font-size: 14px;
+            }
+        }
+
+        &.__regular{
+            &:after {
+                border-color: @brand-warning;
+            }
+        }
+
+        &.__alert{
+            &:after {
+                border-color: @brand-alert;
+            }
+        }
+        &.__delay{
+            &:after {
+                border-color: @brand-green;
+            }
+        }
+        &.__absense{
+            img{
+                content: url('images/icon-absent.png') !important;
+            }
+            &:after {
+                border-color: @brand-orange;
+            }
+        }
+        &.__occurrence{
+            &:after {
+                border-color: @brand-panic;
+            }
+        }
+        &.__device{
+            &:after {
+                border-color: @brand-blue;
+            }
+        }
+
+    }
+    .comment{
+        p{
+            font-size: 0.85em;
+            padding: 5px 0;
+            margin: 0;
+            margin-bottom: 1px;
+        }
+
+        a{
+            opacity: 0;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            a {
+                opacity: 1;
+            }
+        }
+    }
+    .comment-add-wrapper{
+        text-align: right;
+        display: none;
+
+        padding-top: 10px;
+
+        input{
+            width: 90%;
+        }
+    }
+    .send{
+        color: #F05A22;
+        text-decoration: underline;
+        padding-top: 5px;
+        padding-right: 10%;
+        padding-bottom: 3px;
+        font-style: italic;
+        display: inline-block;
+        font-size: 1.1em;
+    }
+
+
+    .text_content{
+        display: inline-block;
+    }
+    .sl-item{
+        position: relative;
+        padding-left: 25px;
+        margin-left: 60px;
+        padding-bottom: 30px;
+        &:after{
+            width: 12px;
+            height: 12px;
+            left: -1px;
+        }
+    }
+    .side-markers{
+        position: absolute;
+        left: -80px;
+        top: 16px;
+        width: 65px;
+        text-align: right;
+        .marker-type{
+            word-break: break-all;
+        }
+    }
+    .marker-type{
+        font-weight: bold;
+        color: @brand-blue-dark;
+        input:checked + .marker-content{
+            color: @brand-white;
+            background: @brand-blue-dark;
+            border: 1px solid transparent;
+        }
+        .marker-content{
+            font-weight: bold;
+            cursor: pointer;
+        }
+        &.__violet{
+            .marker-content{
+                color: #4F487C;
+            }
+            input:checked + .marker-content{
+                background: #4F487C;
+            }
+        }
+        &.__green{
+            .marker-content{
+                color:#1C998B;
+            }
+            input:checked + .marker-content{
+                background: #1C998B;
+            }
+        }
+        &.__red{
+            .marker-content{
+                color:#D7263E;
+            }
+            input:checked + .marker-content{
+                background: #D7263E;
+            }
+        }
+        input{
+            display: none;
+        }
+    }
+    .underline{
+        color: @brand-black;
+        border-bottom: 1px solid @brand-black;
+        margin-right: 10px;
+    }
+    .name{
+        span{
+            font-weight: normal;
+        }
+    }
+    .comment_content{
+        padding-left: 30px;
+        p{
+            margin: 0;
+        }
+        .name{
+            margin-left: 5px;
+        }
+    }
+    .search{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        background: @brand-gray-0;
+        border-radius: 50%;
+
+        i{
+            position: absolute;
+            color: @brand-gray-7;
+            top: 8px;
+            left: 8px;
+        }
+    }
+    .icon_circle{
+        top: 7px;
+        width: 25px;
+        height: 25px;
+        margin: 0 3px;
+        cursor: pointer;
+        position: relative;
+        border-width: 1px;
+        border-radius: 50%;
+        border-style: solid;
+        display: inline-block;
+        background: @brand-gray-0;
+        border-color: rgba(255, 255, 255, 0);
+        &:first-of-type{
+            margin-left: 5px;
+        }
+        i{
+            position: absolute;
+            top: 4px;
+            left: 6px
+        }
+        &.__edit{
+            border-color: @brand-green;
+        }
+        &.__delete{
+            border-color: @brand-panic;
+        }
+    }
+    .company{
+        padding-left: 40px;
+        padding-top: 5px;
+        span {
+          color: @brand-blue-dark;
+          font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+.timeline {
+
+  .panel-body {
+    padding-left: 40px;
+    padding-right: 50px;
+  }
+
+  .text_content{
+      display: inline-block;
+  }
+
+  .markers{
+      span{
+          font-weight: bold;
+          font-size: 0.8em;
+          border: 1px solid #ccc;
+          padding: 0 3px;
+          display: inline-block;
+          margin: 3px;
+          border-radius: 3px;
+      }
+      .__violet{
+          color: #4F487C;
+      }
+      .__green{
+          color:#1C998B;
+      }
+      .__red{
+          color:#D7263E;
+      }
+      .__black{
+          color:#2C4251;
+      }
+  }
+
+  .date {
+    color: @brand-gray-7;
+    font-size: 0.8em;
+  }
+  .name{
+      margin-top: 0;
+      margin-bottom: 3px;
+      font-weight: bold;
+      color: @brand-gray-7;
+  }
+
+  .icon-comment {
+    transition: 0.2s opacity ease;
+  }
+
+  .streamline{
+      font-size: 0.9em;
+
+  }
+  .sl-item{
+    padding-left: 15px;
+    border-left: 1px solid @brand-gray-4;
+
+    &:after{
+        top: 18px;
+    }
+
+    &.__com{
+        .comment-add-wrapper{
+            display: none;
+
+        }
+    }
+
+    &.__regular{
+      &:after {
+        border-color: @brand-warning;
+      }
+    }
+    &.__alert{
+      &:after {
+        border-color: @brand-alert;
+      }
+    }
+    &.__delay{
+      &:after {
+        border-color: @brand-green;
+      }
+    }
+    &.__absense{
+        img{
+            content: url('images/icon-absent.png') !important;
+        }
+        &:after {
+            border-color: @brand-orange;
+        }
+    }
+    &.__occurrence{
+      &:after {
+        border-color: @brand-panic;
+      }
+    }
+    &.__device{
+      &:after {
+        border-color: @brand-blue;
+      }
+    }
+
+  }
+
+  .comments{
+      color: @brand-gray-7;
+      a{
+          margin-left: 15px;
+      }
+  }
+  .comment{
+    p{
+      font-size: 0.85em;
+      padding: 5px 0;
+      margin: 0;
+      margin-bottom: 1px;
+    }
+
+    a{
+      opacity: 0;
+      margin-right: 5px;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+  .comment-add-wrapper{
+      text-align: right;
+      display: none;
+
+      padding-top: 10px;
+
+      input{
+          width: 90%;
+      }
+  }
+  .send{
+      color: #F05A22;
+      text-decoration: underline;
+      padding-top: 5px;
+      padding-right: 10%;
+      padding-bottom: 3px;
+      font-style: italic;
+      display: inline-block;
+      font-size: 1.1em;
+  }
+
+}

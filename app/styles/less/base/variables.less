@@ -1,0 +1,130 @@
+/*
+
+*/
+
+@brand-primary:         #7266ba;
+@brand-info:            #7266ba;
+@brand-success:         #27c24c;
+@brand-warning:         #D6D46A;
+@brand-danger:          #E33244;
+@brand-light:           #edf1f2;
+@brand-dark:            #3a3f51;
+@brand-black:           #000000;
+@brand-white:           #FFFFFF;
+
+@brand-gray-0:          #f5f5f5;
+@brand-gray-1:          #f6f8f8;
+@brand-gray-2:          #f6f6f6;
+@brand-gray-3:          #DEE5E7;
+@brand-gray-4:          #d6d6d6;
+@brand-gray-5:          #d5d5dd;
+@brand-gray-6:          #cbcbd2;
+@brand-gray-7:          #8F8F9B;
+@brand-gray-8:          #ECEBEB;
+
+@brand-panic:           #D7263D;
+@brand-panic-light:     #e9455b;
+@brand-panic-lighter:   #f76a7d;
+@brand-alert:           #4B4479;
+@brand-alert-light:     #655e99;
+@brand-alert-lighter:   #d0cbf2;
+@brand-green:           #1B998B;
+@brand-green-light:     #09AB99;
+@brand-green-lighter:   #cffffa;
+@brand-green-lighter-2: #36caba;
+@brand-green-lighter-3: #cefffa;
+@brand-blue:            #5998C5;
+@brand-blue-med:        #43677f;
+@brand-blue-light:      #65aadb;
+@brand-blue-lighter:    #7fbdea;
+@brand-blue-dark:       #2C4251;
+@brand-orange:          #b4b6bd;
+@brand-orange-light:    #f97e50;
+@brand-yellow-light:    #FFFBCB;
+@brand-brown:           #9a8f97;
+@brand-brown-light:     #a79ea4;
+@brand-brown-dark:      #878085;
+
+
+@body-bg:               lighten(@brand-light, 1%);
+@text-color:            #717171;
+@text-muted:            lighten(@text-color, 25%);
+
+@font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-lg:            ceil(@font-size-base * 1.23); // ~20px
+@font-size-md:            ceil(@font-size-base * 1.14); // ~16px
+@font-size-sm:            ceil(@font-size-base * 0.92); // ~13px
+@font-size-xs:            ceil(@font-size-base * 0.85); // ~12px
+
+@link-color:              inherit;
+@link-hover-color:        inherit;
+
+@border-radius-base:      2px;
+@border-color:		  	  darken(@brand-light, 5%);
+
+@line-height-base:        1.42857143; // 20/14
+@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+@icon-css-prefix:         i;
+
+// Buttons
+// -------------------------
+
+@btn-default-color:              @text-color;
+@btn-default-bg:                 lighten(@brand-light, 5%);
+@btn-default-border:             @border-color;
+@btn-border-radius:              @border-radius-base;
+
+@input-border:                   darken(@border-color, 5%);
+@input-border-focus:             @brand-info;
+@input-border-radius:            @border-radius-base;
+
+@panel-bg:                    	 #fff;
+@panel-border:                	 @border-color;
+@panel-heading-border:           lighten(@border-color, 5%);
+@panel-list-group-border:        lighten(@border-color, 5%);
+@panel-border-radius:         	 @border-radius-base;
+@panel-heading-bg:            	 lighten(@brand-light, 3%);
+@panel-footer-bg:             	 #fff;
+
+@nav-bg:                         lighten(@brand-light, 3%);
+@badge-bg:                       darken(@brand-light, 10%);
+
+@list-group-item-border:         lighten(@border-color, 3%);
+@list-group-item-hover:          lighten(@brand-light, 3%);
+@list-group-item-focus:          darken(@brand-light, 3%);
+@list-group-select-color:        #dbeef9;
+@list-group-active-color:        @brand-info;
+
+@table-border-color:             lighten(@border-color, 4%);
+@table-striped-color:            lighten(@brand-light, 4.5%);;
+
+@arrow-width:         			     8px;
+@arrow-color:         			     #fff;
+@arrow-outer-width:   			     (@arrow-width + 1);
+@arrow-outer-color:   			     rgba(0,0,0,.1);
+
+@switch-width:                   35px;
+@switch-height:                  20px;
+@switch-md-width:                40px;
+@switch-md-height:               24px;
+@switch-lg-width:                50px;
+@switch-lg-height:               30px;
+
+@app-aside-width:                200px;
+@app-aside-nav-height:           40px;
+@app-aside-folded-width:         60px;
+@app-aside-folded-nav-height:    50px;
+@app-aside-dock-media:           992px;
+
+@app-header-height:              50px;
+@app-header-md-height:			  	 60px;
+
+@scroll-bar-width:               17px;
+@butterbar-height:               3px;
+@butterbar-time:                 0.75s;
+
+@off-screen-width:               75%;

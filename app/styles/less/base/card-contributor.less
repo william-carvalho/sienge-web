@@ -1,0 +1,194 @@
+.card_contributor{
+    text-align: center;
+    padding: 25px 10px;
+    height: 90px;
+    cursor: pointer;
+
+    .thumb-sm{
+        height: auto;
+        position: relative;
+        width: 35px;
+    }
+
+    .col {
+      vertical-align: middle;
+    }
+
+    &.__selected{
+        .inner_contributor{
+            border-radius: 10px;
+            //box-shadow: 0 0 0 2px @brand-orange;
+            border: 2px dashed @brand-orange;
+            background: @brand-gray-1;
+            box-sizing: border-box;
+            padding: 3px 8px;
+
+        }
+        .name{
+            color: @brand-orange;
+            font-weight: bold;
+            max-height: 30px;
+        }
+    }
+    .status_icon {
+        left: auto;
+        top: auto;
+        bottom: -3px;
+        right: -3px;
+        display: none;
+        border-color: @brand-white;
+    }
+
+    .occurrence {
+        padding: 2px 5px;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 2px;
+        border-radius: 10px;
+
+        left: auto;
+        top: auto;
+        bottom: -3px;
+        right: -3px;
+        display: none;
+    }
+
+    .desc {
+        text-align: left;
+        padding-left: 10px;
+
+    }
+
+    .name {
+        margin: 0;
+    }
+
+    .schedule {
+        top: -1px;
+        position: relative;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .checkpoints {
+        display: none;
+        margin-top: 5px;
+    }
+    .badge{
+        background: @brand-gray-6;
+        &.__badge_active{
+            background: @brand-success;
+        }
+    }
+
+    img.avatar_2 {
+      display: none;
+      top: 18px;
+      right: 10px;
+    }
+
+    .switch_name {
+      display: none;
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: @brand-green;
+    }
+
+    img.img_switch {
+      display: none;
+      width: 10px !important;
+      margin-left: 15px;
+    }
+
+    // Modifier __active for making it green
+    &.__active {
+
+        .name {
+            color: @brand-success;
+        }
+
+        .schedule {
+            color: @brand-success;
+        }
+
+        .avatar {
+            border-color: @brand-success;
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        .status_icon {
+            display: block;
+            background-color: @brand-success;
+            border-width: 1px;
+
+        }
+
+        .checkpoints {
+            display: block;
+        }
+
+    }
+
+    &.__occurrence {
+        .occurrence {
+            display: block;
+            background: @brand-panic;
+        }
+        .avatar {
+            border-color: @brand-panic;
+            border-width: 1px;
+            border-style: solid;
+        }
+    }
+
+    &.__absent {
+
+        .name {
+            font-size: 1.2em;
+        }
+        .schedule {
+            display: none;
+        }
+
+        .col {
+            vertical-align: middle;
+        }
+    }
+
+    &.__switch{
+      .thumb-sm {
+        vertical-align: top;
+      }
+      .avatar {
+          img{
+              position: absolute;
+          }
+          .avatar_1 {
+              top: 5px;
+              left: 5px;
+              z-index: 1;
+              border: 2px solid @brand-green;
+              border-radius: 50%;
+          }
+          .avatar_2{
+            display: block;
+          }
+      }
+      .switch_name{
+        display: block;
+      }
+      .name{
+          padding-top: 10px;
+          font-size: 0.9em;
+          margin-bottom: 2px;
+          color: @brand-green;
+      }
+      .img_switch {
+        display: inline-block;
+      }
+    }
+}

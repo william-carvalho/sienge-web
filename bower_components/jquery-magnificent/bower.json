@@ -1,0 +1,56 @@
+{
+  "name": "magnificent",
+  "version": "2.0.2",
+  "description": "Zoom responsively.",
+  "main": [
+    "src/js/mag.js",
+    "src/js/mag-jquery.js",
+    "src/js/mag-control.js",
+    "src/css/mag.css",
+    "src/theme/default.css"
+  ],
+  "authors": [
+    {
+      "name": "Anders D. Johnson",
+      "homepage": "https://github.com/adjohnson916"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "jquery-bridget": "~1.1.0",
+    "jquery-mousewheel": "~3.1.12",
+    "jquery.threedubmedia": "threedubmedia/jquery.threedubmedia",
+    "screenfull": "~2.0.0"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.2"
+  },
+  "optional": {
+    "files": {
+      "src/theme/default.css": "Or another theme.",
+      "src/js/mag-control.js": "For controls.",
+      "bower_components/jquery-mousewheel/jquery.mousewheel.js": "For scroll zoom.",
+      "bower_components/jquery.threedubmedia/event.drag/jquery.event.drag.js": "For drag interaction.",
+      "bower_components/screenfull/dist/screenfull.js": "For fullscreen."
+    },
+    "dependencies": {
+      "jquery-mousewheel": {
+        "note": "Not required.",
+        "files": {
+          "jquery.mousewheel.js": "For scroll zoom."
+        }
+      },
+      "jquery.threedubmedia": {
+        "note": "Not required.",
+        "files": {
+          "event.drag/jquery.event.drag.js": "For drag interaction."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adjohnson916/magnificent.js.git"
+  }
+}

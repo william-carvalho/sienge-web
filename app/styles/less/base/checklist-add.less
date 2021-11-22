@@ -1,0 +1,118 @@
+.tab-checklist-add {
+    background: transparent !important;
+    padding-top: 0px !important;
+}
+
+.checklist-add {
+    transition: 0.6s ease all;
+    .checklist-question-add {
+        transition: 0.6s ease all;
+        .question-type {
+            transition: 0.6s ease all;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            border-bottom: 1px solid @brand-gray-4;
+            cursor: pointer;
+
+            &.__selected {
+                box-shadow: 0 0 1px 1px #F05A22;
+                transition: 0.6s ease all;
+            }
+
+            &:hover{
+                box-shadow: 0 0 1px 1px #F05A22;
+                transition: 0.2s ease all;
+            }
+        }
+    }
+
+    .panel-heading {
+        color: #8c8d8d;
+
+        span {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-right: 5px;
+        }
+    }
+
+    .control-label {
+        display: block;
+    }
+
+    .sep {
+        padding: 15px;
+
+        &:first-of-type{
+            border-bottom: 1px solid #f6f6f6;
+            padding-bottom: 20px;
+        }
+
+    }
+
+    .dropdown{
+        padding: 0;
+
+        &:after {
+            display: none;
+        }
+
+    }
+
+    .checklist-params {
+        margin-bottom: 10px;
+    }
+
+    .checklist-question-types{
+        position: fixed;
+        width: 500px;
+
+        .panel-heading {
+            padding: 15px 20px;
+        }
+    }
+
+    .question-type {
+        text-transform: uppercase;
+        padding: 15px 30px;
+        border-bottom: 1px solid @brand-gray-4;
+        line-height: 1em;
+        cursor: pointer;
+
+        i {
+            margin-right: 15px;
+        }
+
+        &:hover {
+            background: @brand-gray-1;
+        }
+
+        &.__selected {
+            box-shadow: 0 0 1px 1px #F05A22;
+        }
+    }
+
+    .col {
+        padding-top: 40px;
+        padding-right: 30px;
+    }
+
+    .question-select {
+        background: white;
+    }
+
+    .question-text {
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+
+    .input-hint {
+        font-size: 0.9em;
+        text-align: right;
+        font-style: italic;
+    }
+
+    .label-question {
+        font-style: italic;
+    }
+}

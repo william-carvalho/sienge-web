@@ -1,0 +1,28 @@
+<div class="content-body-header-left">
+  <form class="navbar-form navbar-form-sm __content_search" ui-shift="prependTo" target=".navbar-collapse"
+        role="search"><!-- ng-controller="TypeaheadDemoCtrl" -->
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" typeahead="" ng-model="searchAll" class="form-control input-sm bg-light no-border padder bg_color"
+               placeholder="Busca">
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-sm bg-light bg_color" ng-click="listAll(searchAll)"><i class="fa fa-search"></i></button>
+          </span>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="content-body-header-right">
+
+  <button class="btn-add_new btn w-sm btn-primary btn-addon" ng-click="showAdd()"><i
+    class="glyphicon glyphicon-plus icon"></i>{{'ACTION_NEW' | translate}}
+  </button>
+
+  <div class="btn-group dropdown">
+    <button class="btn btn-default">{{sizesSelect.name}}</button>
+    <button class="btn btn-default" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+    <ul class="dropdown-menu _align_right">
+      <li ng-repeat="i in sizes"><a ng-click="changeSize(i)">{{i.name}}</a></li>
+    </ul>
+  </div>
+</div>

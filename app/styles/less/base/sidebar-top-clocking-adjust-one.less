@@ -1,0 +1,170 @@
+.sidebar_clocking_info {
+
+
+    &.__adjust_one {
+
+        
+
+
+
+        .profile {
+            padding-top: 0;
+            &:after {
+                content: none;
+            }
+        }
+
+    }
+
+    .clocking-adjustment-heading {
+        padding-left: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+
+        img {
+            margin-right: 20px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+    }
+
+    .clocking-adjustment-one {
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        input[type=text] {
+            border-radius: 2px;
+            border: 1px solid #dee5e7;
+            color: @brand-gray-7;
+        }
+        .btn-group.dropdown {
+            .btn:first-of-type {
+                border-radius: 2px 0 0 2px;
+            }
+            .btn:last-of-type {
+                border-radius: 0 2px 2px 0;
+            }
+        }
+
+        .input-edit-type {
+            width: 100%;
+            margin-bottom: 10px;
+            .btn-edit-type-list {
+                width: ~"calc(100% - 35px)";
+                text-align: left;
+                color: @brand-gray-7;
+                // font-size: 13px;
+            }
+
+        }
+
+        .txt-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .adjust-to {
+            margin-bottom: 5px;
+        }
+
+        .time-wrapper {
+            width: 60px;
+        }
+
+
+
+        .input-time {
+            max-width: 60px;
+            height: 34px;
+            text-align: center;
+            color: black;
+            font-size: 13px;
+        }
+
+        .date-wrapper {
+            width: 140px;
+            padding-left: 10px;
+        }
+
+        .input-date {
+            width: 100%;
+            height: 34px;
+            padding-left: 10px;
+            color: @brand-gray-7;
+            border-radius: 2px;
+            border: 1px solid #dee5e7;
+            font-size: 13px;
+            &::-webkit-calendar-picker-indicator {
+
+            }
+            &::-webkit-inner-spin-button {
+                display: none;
+                -webkit-appearance: none;
+            }
+        }
+
+        .justification-wrapper {
+            padding-left: 10px;
+        }
+
+        .input-justification {
+            width: 100%;
+
+            .btn-justification-list {
+                width: calc(~"100% - 35px");
+                text-align: left;
+                color: @brand-gray-7;
+                // font-size: 13px;
+            }
+
+        }
+
+    }
+
+    .comment-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .input-comment-wrapper {
+
+
+        }
+        .input-comment {
+            height: 34px;
+            width: 97%;
+            color: black;
+            padding-right: 10px;
+            padding-left: 10px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            border: 1px solid #dee5e7;
+            font-size: 13px;
+        }
+        .btn-comment-wrapper {
+            width: 100px;
+        }
+        .btn-comment {
+            height: 34px;
+            background: @brand-green-light;
+            border: 1px solid white;
+            width: 100%;
+        }
+        .comment-list {
+            padding: 15px 0;
+
+            .title {
+                color: @brand-green-lighter-3;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        }
+        .comment {
+            color: @brand-green-lighter-3;
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

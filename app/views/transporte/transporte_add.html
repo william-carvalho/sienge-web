@@ -1,0 +1,132 @@
+<div class="crud_add __hidden" data-id="{{client_id}}">
+  <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h1 class="m-n font-thin h3 text-black">{{'GENERIC_SAVE' | translate}} / {{'GENERIC_EDIT' | translate}}</h1>
+        <small class="text-muted">{{'GENERIC_INFO' | translate}}</small>
+      </div>
+    </div>
+    <div class="close-action" ng-click="hideAdd()">
+      {{'ACTION_CLOSE' | translate}}
+      <a class="btn btn-md btn-bg btn-rounded btn-default btn-icon"><i class="glyphicon glyphicon-remove icon"></i></a>
+    </div>
+  </div>
+  <div data-ng-include=" 'views/crud/partial.status_msg.html' "></div>
+  <div class="app-content-body">
+
+
+
+    <form class="content-form form-group" name="clientForm" novalidate action="index.html" method="post">
+      <div class="form-data row">
+
+		    <div class="form-group col-sm-12">
+          <label class="col-sm-12 control-label" for="nome"><i class="glyphicon glyphicon-info-sign icon"></i>
+            {{'GENERIC_DESCRIPTION' | translate}}</label>
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="nome" ng-model="newtransporte.transporte.descricao" ng-maxlength="255">
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="col-sm-12 control-label" for="name"><i class="glyphicon glyphicon-info-sign icon"></i>
+            CARGA</label>
+          <div class="col-sm-10">
+            <input type="number" min="0" step="1" class="form-control" id="carga" name="carga" ng-model="newtransporte.transporte.carga" ng-minlength="0"
+                   ng-maxlength="255" ng-required="true">
+            <div class="field-message" ng-class="{'has-error': clientForm.custo.$invalid}"
+                 ng-messages="clientForm.custo.$error" ng-if='clientForm.custo.$dirty' ng-cloak>
+              <div ng-message="required">{{'ACTION_REQUIRED' | translate}}</div>
+              <div ng-message="minlength">{{'ACTION_REQUIRED_MINIMUM_CHARACTERS' | translate}}</div>
+              <div ng-message="maxlength">{{'ACTION_REQUIRED_MAXIMUM_CHARACTERS' | translate}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-sm-3" ng-init="showVeiculo()">
+        							<label class="col-sm-12 control-label"> <strong>Veículo <span class="required">*</span>
+        							</strong>
+        							</label>
+        							<div class="col-sm-12">
+        								<select class="form-control ng-pristine ng-valid ng-touched"
+        									ng-required="true" name="dataVeiculo"
+        									id="dataVeiculo" ng-model="dataVeiculo.model"
+        									ng-options="dataVeiculo as dataVeiculo.tipoVeiculo.descricao + ' - ' + dataVeiculo.nome  for dataVeiculo in dataVeiculo.availableOptions">
+        									<option style="display: none" value="">{{'SELECT' |
+        										translate}} Veículo</option>
+        								</select>
+
+        							</div>
+        </div>
+
+        <div class="form-group col-sm-12" >
+        <div class="form-group col-sm-4">
+          <label class="col-sm-12 control-label" for="name"><i class="glyphicon glyphicon-info-sign icon"></i>
+            Distância</label>
+          <div class="col-sm-4">
+            <input type="number" min="0" step="1" class="form-control" id="distancia" name="distancia" ng-model="newtransporte.distancia" ng-minlength="0"
+                   ng-maxlength="255" ng-required="true">
+            <div class="field-message" ng-class="{'has-error': clientForm.distancia.$invalid}"
+                 ng-messages="clientForm.distancia.$error" ng-if='clientForm.distancia.$dirty' ng-cloak>
+              <div ng-message="required">{{'ACTION_REQUIRED' | translate}}</div>
+              <div ng-message="minlength">{{'ACTION_REQUIRED_MINIMUM_CHARACTERS' | translate}}</div>
+              <div ng-message="maxlength">{{'ACTION_REQUIRED_MAXIMUM_CHARACTERS' | translate}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-sm-5" ng-init="showRodovia()">
+                      <label class="col-sm-12 control-label"> <strong>Rodovia <span class="required">*</span>
+                      </strong>
+                      </label>
+                      <div class="col-sm-12">
+                        <select class="form-control ng-pristine ng-valid ng-touched"
+                          ng-required="true" name="dataRodovia"
+                          id="dataRodovia" ng-model="dataRodovia.model"
+                          ng-options="dataRodovia as dataRodovia.tipoRodovia.descricao  + ' - ' + dataRodovia.nome for dataRodovia in dataRodovia.availableOptions">
+                          <option style="display: none" value="">{{'SELECT' |
+                            translate}} Rodovia</option>
+                        </select>
+
+                      </div>
+        </div>
+        <div class="form-group col-sm-2">
+          <label class="col-sm-12 control-label"> <strong> Adicionar <span class="required"></span>
+          </strong>
+          </label>
+        <div class="btn btn-default btn-save-edit"  ng-click="addRodovias()">
+          <a><span>Distância e rodovia</span></a>
+        </div>
+        </div>
+        <div class="form-group col-sm-12">
+        <div class="content-table">
+										<table style="width: 100%" class="table">
+											<tbody>
+												<tr class="thead">
+													<th class="ng-binding">Rodovia</th>
+													<th class="ng-binding">Distancia</th>
+
+												</tr>
+												<tr
+													ng-repeat="p in dataRodovias.availableOptions track by $index"
+													data-id="{{p.id}}">
+													<td>{{p.tipoRodovia.descricao}} - {{p.nome}}</td>
+													<td>{{p.distancia}}</td>
+													<td><i class="icon-close"
+														ng-click="removeRodovias(p.id)"></i></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                  </div>
+      </div>
+      </div>
+      <div class="overlayer-actions">
+        <div class="btn btn-default btn-delete __btn_pink" ng-click="showexclusionmodal()">
+          <a><span>{{'ACTION_REMOVE' | translate}}</span></a>
+        </div>
+        <div class="btn btn-default btn-save-edit" ng-disabled="clientForm.$invalid" ng-click="saveTransporte()">
+          <a><span>{{'ACTION_SAVE' | translate}}</span></a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>

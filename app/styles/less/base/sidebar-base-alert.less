@@ -1,0 +1,271 @@
+.base_alert {
+    padding: 0;
+    .panel-body{
+        padding: 15px !important;
+    }
+    .timers-wrapper {
+        padding: 10px 20px !important;
+        margin-left: 0 !important;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        background-color: @brand-gray-1;
+        border-radius: 2px 2px 0 0;
+        border-bottom: 1px solid transparent;
+
+        &.list {
+          border-radius: 4px;
+        }
+
+        .text_content{
+            text-transform: uppercase;
+            display: inline-block;
+            &.__bold{
+                font-weight: bold;
+            }
+        }
+        .btn_add{
+            display: inline-block;
+            i{
+                padding-right: 10px;
+            }
+            .btn_content{
+                padding-right: 10px;
+                margin: 0;
+            }
+        }
+        .title_section{
+            border-bottom: 1px solid @brand-gray-4;
+        }
+        .timer_section{
+        }
+        .timer{
+            padding: 15px 0 25px 0;
+            label{
+                text-transform: none;
+                padding-left: 0;
+            }
+            .col {
+              text-align: right;
+            }
+            &.__week_wrapper{
+              max-width: 300px;
+              margin: 0 auto;
+            }
+        }
+        .name{
+            display: block;
+            margin: 15px auto;
+            width: 80%;
+            border: 1px solid @brand-gray-4;
+            padding: 7px 10px;
+            box-sizing: border-box;
+        }
+        .action{
+            padding-top: 15px;
+            border-top: 1px solid @brand-gray-4;
+        }
+        .btn_exit, .btn_save{
+            padding: 3px 53px;
+            margin: 0 5%;
+            color: #fff !important;
+        }
+        .btn_exit{
+            background: @brand-panic;
+        }
+        .btn_save{
+            margin-right: 10%;
+            background: #4a4f59;
+        }
+        .i-checks{
+            padding-top: 9px;
+            text-transform: uppercase;
+        }
+        .i-checks input:checked + i:before{
+            background: #23b7e5;
+        }
+        .i-checks>i {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-top: -2px;
+            margin-right: 0;
+            line-height: 1;
+            background-color: #fff;
+            border: 1px solid #cfdadd;
+            margin-left: 0;
+        }
+        .checkbox{
+            display: inline;
+            &.__spacebtw{
+                padding: 10px 11px;
+                &:first-of-type{
+                    padding-left: 0;
+                }
+                &:last-of-type{
+                    padding-right: 0;
+                }
+            }
+            &.__week{
+                .i-checks input + i {
+                    text-align: center;
+                    line-height: 20px;
+                    color: @brand-gray-4;
+                    font-weight: bold;
+                }
+                .i-checks input:checked + i {
+                    color: @brand-orange;
+                }
+                .i-checks > i:before {
+                  display: none;
+                }
+                input {
+                  margin: 0;
+                }
+            }
+        }
+        .check_content{
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            font-weight: bold;
+            font-style: normal;
+            color: @brand-gray-4;
+        }
+        .no_bd{
+            border: none;
+            display: inline-block;
+            .text_content{
+                color: @brand-gray-7;
+            }
+        }
+        .delete, .time, .day{
+            display: inline-block;
+            p{
+                color: @brand-gray-7;
+            }
+        }
+        .delete{
+            float: right;
+        }
+        .time{
+            width: 250px;
+            font-size: 1.2em;
+        }
+        .day{
+            width: 100px;
+            float: right;
+            p{
+                text-align: right;
+            }
+        }
+        .big_custom{
+            font-size: 0.6em;
+            text-transform: uppercase;
+        }
+        .icon{
+          color: @brand-gray-3;
+        }
+        p {
+          margin: 0;
+        }
+    }
+
+    .create_alert {
+      display: none;
+    }
+
+    .device-status {
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        width: 60px;
+        padding-left: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: @brand-success;
+
+        .bg-device {
+            position: relative;
+            margin: 0 auto;
+            background-image: url('../../images/device.png');
+            background-position: center;
+            background-size: contain;
+            height: 50px;
+            width: 50px;
+            margin: 0;
+            top: 7px;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                font-size: 13px;
+                &:after {
+                    content: "%";
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    .device-group{
+      margin: 3px 0;
+      width: 49%;
+      display: inline-block;
+
+      &.__warning {
+        .device-status,
+        .data-title  {
+          color: @brand-warning !important;
+        }
+      }
+      &.__alert {
+        .device-status,
+        .data-title  {
+          color: @brand-panic !important;
+        }
+      }
+
+    }
+
+    .device-inner {
+        background: @brand-gray-0;
+        border: 1px solid white;
+        border-radius: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin: 0;
+        display: block;
+
+    }
+    .checkbox-device {
+      display: none;
+
+      &:checked + .device-inner{
+        border: 1px solid @brand-orange;
+      }
+    }
+    .device-data {
+        padding: 5px;
+        padding-top: 0;
+        background-color: #f5f5f5;
+
+    }
+
+    .data-title{
+        font-size: 13px;
+        line-height: 1.5;
+        font-weight: bold;
+        color: @brand-success;
+    }
+    .id {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+    .label-phone {
+      font-size: 10px;
+    }
+    .phone {
+      font-size: 10px;
+    }
+
+}

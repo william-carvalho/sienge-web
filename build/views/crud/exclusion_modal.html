@@ -1,0 +1,21 @@
+<div class="app-modal __hidden">
+  <div class="modal-card-container">
+    <div class="modal-card-content">
+      <div class="card-header">
+        <h3>{{'ACTION_DELETE' | translate}}</h3>
+        <a class="btn-close" ng-click="cancelExclusion()"><i class="glyphicon glyphicon-remove icon"></i></a>
+      </div>
+      <div class="card-content">
+        <p>{{'ACTION_CONFIRM_DELETE' | translate}}</p>
+      </div>
+      <div class="card-actions">
+        <div class="btn btn-default btn-cancel" ng-click="cancelExclusion()">
+          <a><span>{{'ACTION_NO' | translate}}</span></a>
+        </div>
+        <div class="btn btn-default btn-confirm __btn_pink" ng-click="confirmExclusion()">
+          <a><span>{{'ACTION_YES' | translate}}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

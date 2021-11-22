@@ -1,0 +1,139 @@
+.panel.sidebar_occurrence{
+    color: white;
+    border: none;
+
+    .panel-heading {
+        background-color: @brand-alert-light;
+        color: white;
+        border: none;
+    }
+
+    .panel-body{
+        background-color: @brand-alert;
+        padding: 20px 50px;
+    }
+    .icon{
+        padding: 8px 10px 0 10px;
+    }
+    .status-label{
+        padding-top: 13px;
+        display: inline-block;
+    }
+    .operator-label{
+        font-weight: bold;
+        padding-bottom: 10px;
+        display: block;
+    }
+    .operator-phone, .phone-contributor, .phone-supervisor{
+        i{
+            padding-right: 5px;
+            display: inline-block;
+        }
+    }
+    .operator-name{
+        font-weight: normal;
+        padding-bottom: 5px;
+        display: block;
+    }
+    .note-meta{
+        display: block;
+        font-size: .9em;
+        padding-bottom: 5px;
+    }
+    .note-desc{
+        display: block;
+        padding-bottom: 15px;
+    }
+    .answer{
+        font-size: 1em;
+    }
+    .second-big{
+        font-size: 1.6em;
+    }
+    .supervisor-name{
+        padding-left: 25px;
+    }
+    .phones, .input-note, .input-finish{
+        padding-left: 55px;
+        padding-bottom: 5px;
+    }
+    .btn-confirm{
+        background: @brand-alert-light;
+        border: 1px solid #dee5e7;
+    }
+    .add_obs{
+        padding: 5px 5px 7px 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        color: #000;
+        width: ~"calc(100% - 100px)";
+    }
+    .finish{
+        background: @brand-alert-lighter;
+        color: @brand-alert;
+        width: 100%;
+    }
+
+
+    &.__panic {
+
+        .panel-heading {
+            background-color: @brand-panic-light;
+        }
+
+        .panel-body{
+            background-color: @brand-panic;
+        }
+
+        .btn-confirm {
+            background-color: @brand-panic-light;
+        }
+
+        .finish {
+            background-color: @brand-panic-lighter;
+            color: @brand-panic;
+        }
+    }
+
+    &.__alert {
+        .panel-heading {
+            background-color: @brand-alert-light;
+        }
+
+        .panel-body{
+            background-color: @brand-alert;
+        }
+
+        .btn-confirm {
+            background-color: @brand-alert-light;
+        }
+
+        .finish {
+            background-color: @brand-alert-lighter;
+            color: @brand-alert;
+        }
+    }
+
+    &.__device {
+        .panel-heading {
+            background-color: @brand-blue-light;
+        }
+
+        .answer {
+          font-size: 1.2em;
+        }
+
+        .panel-body{
+            background-color: @brand-blue;
+        }
+
+        .btn-confirm {
+            background-color: @brand-blue-light;
+        }
+
+        .finish {
+            background-color: @brand-blue-lighter;
+            color: @brand-blue;
+        }
+    }
+}

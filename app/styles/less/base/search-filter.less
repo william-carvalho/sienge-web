@@ -1,0 +1,105 @@
+.search_filter{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    &.__hidden {
+        display: none;
+    }
+    .bd{
+        border-right: 1px solid @brand-gray-4;
+    }
+    .filter_container{
+        position: fixed;
+        top: 10vh;
+        display: block;
+        background: @brand-white;
+        border-radius: 5px;
+        padding: 0;
+    }
+    .filter_title{
+        text-align: left;
+        border-bottom: 1px solid @brand-gray-4;
+        margin: 0;
+        padding: 20px 40px;
+        font-size: 1.8em;
+    }
+    .filter_form{
+        padding: 30px;
+        form{
+            .input-group{
+                width: 100%;
+            }
+            span{
+                background: rgba(255, 255, 255, 0);
+                border: none;
+                position: absolute;
+                z-index: 3;
+                top: 4px;
+                color: @brand-gray-4;
+            }
+            input{
+                padding: 6px 30px;
+                border-radius: 3px !important;
+                box-sizing: border-box;
+                &.__contributor{
+                    width: ~"calc(100% - 60px)";
+                    margin-top: 6px;
+                    padding-left: 15px;
+                }
+            }
+            img{
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+    .filters{
+        padding: 30px;
+        .filter_item{
+            border: 1px solid @brand-gray-4;
+            border-radius: 3px;
+            min-width: 100px;
+            max-width: 170px;
+            display: inline-block;
+            margin: 5px;
+            a{
+                position: relative;
+                padding: 8px 0;
+                display: block;
+                span{
+                    padding: 0 6px;
+                    display: inline-block;
+                    line-height: 1;
+                    position: relative;
+                    top: 4px;
+                }
+                i{
+                    padding: 0 6px;
+                    display: inline-block;
+                }
+                .item_break{
+                    position: absolute;
+                    top: 5px;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                }
+                .item_close{
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+    .filter_button{
+        padding: 30px;
+        text-align: center;
+        background: @brand-gray-2;
+        border-top: 1px solid @brand-gray-4;
+        .button_link{
+            padding: 6px 35px;
+        }
+    }
+}

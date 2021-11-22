@@ -1,0 +1,49 @@
+
+
+
+.checklist {
+
+
+  .nav-tabs {
+    padding-top: 10px;
+  }
+
+  .btn-status {
+
+    .button-variant(@text-color, @btn-default-bg, @btn-default-border);
+    background-color: #fff;
+    border-bottom-color: darken(@btn-default-border, 2%);
+    .box-shadow(0 1px 1px rgba(90,90,90,0.1));
+    &.btn-bg{
+      border-color:rgba(0,0,0,0.1);
+      background-clip: padding-box;
+    }
+
+    width: 100px;
+
+    &.__finished{
+      .button-variant(#fff, @brand-primary, @brand-primary);
+    }
+  }
+
+  .box-checklist {
+    cursor: pointer;
+    .panel-heading{
+      padding: 0 20px;
+
+    }
+
+    .answer-label {
+      text-transform: uppercase;
+      color: @brand-gray-7;
+      font-size: 0.9em;
+    }
+
+    .answer-count {
+      color: @brand-orange;
+      margin-left:5px;
+      font-size: 1.9em;
+    }
+  }
+
+}

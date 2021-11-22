@@ -1,0 +1,43 @@
+.profile {
+    .tab-content {
+        transition: all .5s ease;
+        
+    }
+    .timecard {
+        // display: none;
+        .timecard-header {
+            margin-bottom: 30px;
+        }
+        .panel-body {
+            .timecard-table {
+                transition: all .4s ease;
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 25px;
+                table-layout: fixed;
+                tr {
+                    td {
+                        width: 60px;
+                    }
+                    td.__highlight {
+                        display: table-cell;
+                        font-weight: bold;
+                    }
+
+                    td:nth-of-type(2) {
+                        text-align: right;
+                        &.__highlight {
+                            font-weight: normal;
+                        }
+                    }
+                    td:nth-of-type(1) {
+                        display: none;
+                    }
+                    td:nth-of-type(n+3) {
+                        background-color: @brand-gray-1;
+                    }
+                }
+            }
+        }
+    }
+}

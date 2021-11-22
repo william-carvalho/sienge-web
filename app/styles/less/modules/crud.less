@@ -1,0 +1,260 @@
+//BEGIN: Estilização do cadastro de empresas
+.crud {
+	height: 100%;
+	position: relative;
+
+	.btn-add_new {
+		margin-right: 15px;
+	}
+	.app-content-body {
+		padding: 30px 30px 0 30px;
+		padding-bottom: @app-header-height;
+		background: #fff;
+	}
+	.content-body-header{
+		display: block;
+		img{
+			width: 75px;
+			height: 75px;
+			border-radius: 50%;
+		}
+	}
+	.content-body-header-left {
+		display: inline-block;
+		max-width: 49%;
+	}
+	.content-body-header-right {
+		float: right;
+		max-width: 49%;
+	}
+
+	//	BEGIN: Modificador da busca
+	.__content_search{
+		margin: 0;
+		padding: 0;
+		.form-control{
+			border: 1px solid rgba(0, 0, 0, .1);
+			border-right: none;
+			padding: 17px;
+			font-size: 15px;
+		}
+		.btn{
+			border: 1px solid rgba(0, 0, 0, .1);
+			border-left: none;
+			padding: 8px 10px;
+		}
+		.bg_color{
+			background: #fff;
+		}
+	}
+	// END: Modificador da busca
+
+	.content-table{
+		border: 1px solid rgba(0, 0, 0, .1);
+		border-radius: 3px;
+		margin: 30px 0 5px 0;
+
+		.table{
+			margin-bottom: 0;
+		}
+
+		th {
+			border-top: none;
+			color: #9D9DA7;
+			i.fa-sort {
+				margin-left: 10px;
+				font-size: 10px;
+				cursor: pointer;
+			}
+		}
+
+		tr {
+			cursor: pointer;
+			transition: all .20s;
+			&:nth-of-type(2n+4) {
+				background-color: #F9FAFC;
+			}
+			&:hover{
+				background: #dee2e2;
+				td{
+					color: white;
+				}
+			}
+		}
+
+		td {
+			color: #9D9DA7;
+			max-width: 180px;
+
+		}
+		td:nth-of-type(1), td:nth-of-type(2) {
+			font-weight: bold;
+		}
+
+		.thead{
+			background: white;
+			cursor: inherit;
+			&:hover{
+				background: inherit;
+			}
+		}
+		.icon{
+			padding-right: 10px;
+		}
+
+		.row-logo {
+			vertical-align: middle;
+			width: 40px;
+			padding-right: 0;
+		}
+		.row-logo-img {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			border: 1px solid rgba(0,0,0,.2);
+		}
+	}
+
+	.pagination-description {
+		text-align: right;
+		color: darken(@brand-light, 30%);
+		span:first-of-type {
+			color: #7266ba;
+
+		}
+	}
+	.pagination{
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+		.pagination_itens{
+			display: block;
+			// margin: 0 auto;
+			// width: 224px;
+			font-size: 0;
+			padding: 0px !important;
+			li{
+				display: inline;
+
+				a{
+					padding: 5px 10px;
+					color: #7266ba;
+					// float: left;
+					font-size: @font-size-base;
+					border-top: 1px solid rgba(0,0,0,.1);
+					border-left: 1px solid rgba(0,0,0,.1);
+					border-bottom: 1px solid rgba(0,0,0,.1);
+
+					&:hover {
+						background-color: @brand-light;
+					}
+				}
+				&:last-of-type {
+					a {
+						border-right: 1px solid rgba(0,0,0,.1);
+					}
+
+
+				}
+			}
+		}
+	}
+	.total_records {
+		color: #000;
+	}
+}
+// END: Estilização do cadastro de empresas
+
+// BEGIN: Overlayer Edicao de cadastro de empresas
+.crud_add {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	z-index: 9;
+	width: 100%;
+
+	transition: all .5s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+	&.__hidden {
+		left: 100%;
+		overflow: hidden;
+	}
+
+	.close-action {
+		position: absolute;
+		cursor: pointer;
+		right: 30px;
+		top: 30px;
+		font-size: 1.1em;
+
+		.btn {
+			margin-left: 5px;
+		}
+
+		.icon {
+			color: rgba(0,0,0,.2);
+		}
+	}
+	.app-content-body {
+		padding-top: 30px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+		background: #fff;
+	}
+	.overlayer-header {
+		margin-bottom: 30px;
+		.company-logo {
+			width: 75px;
+			height: 75px;
+			border-radius: 50%;
+			border: 1px solid rgba(0,0,0,.2);
+		}
+		.btn-edit-logo {
+			margin-left: 60px;
+			background-color: rgba(0,0,0,.05);
+			border: 1px solid rgba(0,0,0,.2);
+			padding: 8px 20px;
+			cursor: pointer;
+			&:hover{
+				background-color: rgba(0,0,0,.03);
+			}
+		}
+	}
+
+
+	.content-form {
+		padding: 10px 0;
+	}
+
+	.form-data {
+		margin-bottom: 30px;
+	}
+
+	.overlayer-actions {
+		padding-right: 75px;
+		background: #fff;
+		text-align: right;
+		.btn {
+			margin: 0 5px;
+			min-width: 120px;
+		}
+		.btn-save-edit {
+			background-color: #222733;
+			a {
+				color: white;
+			}
+			&:hover {
+				background-color: lighten(#222733, 5%);;
+			}
+		}
+
+	}
+
+}
+
+// END: Overlayer Edicao de cadastro de empresas

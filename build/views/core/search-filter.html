@@ -1,0 +1,68 @@
+<div class="search_filter hbox __hidden overscreen">
+    <div class="row overscreen_child">
+        <div class="filter_container col-xs-8 col-xs-offset-2">
+            <div class="hbox">
+             	<button type="button" class="close" ng-click="closeModal($event)" data-dismiss="modal">&times;</button>
+                <h2 class="filter_title">Filtro de empresa</h2>
+            </div>
+            <div class="col-xs-6 bd">
+                <div class="filter_form">
+                    <form action="index.html" method="post">
+                        <div class="input-group m-b">
+                            <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span>
+                            <p class="input-group">
+                                <input placeholder="{{'CLIENT' | translate}}"  type="text" ng-model="selectedClient" ng-keyup="listAllClient(selectedClient)" class="form-control" ng-model-options="{'debounce': 300}" uib-typeahead="dataClient as dataClient.name for dataClient in fClient | filter: $viewValue | limitTo: 10" typeahead-show-hint="true" typeahead-loading="loadingClient" typeahead-no-results="noResultsClient" typeahead-on-select="onSelectClient($item, $model, $label); selectedClient = ''"/>
+                                <div ng-show="noResultsClient">
+                                    <i class="glyphicon glyphicon-remove"></i> Sem resultados
+                                </div>
+                                <div ng-show="loadingClient">
+                                    <i class="glyphicon glyphicon-refresh"></i> Buscando
+                                </div>
+                            </p>
+                        </div>                        
+                        <div class="input-group m-b">
+                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <input placeholder="{{'BUSINESSUNIT' | translate}}" type="text" ng-model="selectedBusinessUnit" ng-keyup="listAllBusinessUnit(selectedBusinessUnit)" class="form-control" ng-model-options="{'debounce': 300}" uib-typeahead="dataBusinessUnit as dataBusinessUnit.name for dataBusinessUnit in fBusinessUnit | filter: $viewValue | limitTo: 10" typeahead-show-hint="true" typeahead-loading="loadingBusinessUnit" typeahead-no-results="noResultsBusinessUnit" typeahead-on-select="onSelectBusinessUnit($item, $model, $label); selectedBusinessUnit = ''">
+                            <div ng-show="noResultsBusinessUnit">
+                                <i class="glyphicon glyphicon-remove"></i> Sem resultados
+                            </div>
+                            <div ng-show="loadingWorkplace">
+                                <i class="glyphicon glyphicon-refresh"></i> Buscando
+                            </div>
+                        </div>
+                        <div class="input-group m-b">
+                            <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                            <input placeholder="{{'WORKPLACE' | translate}}" type="text" ng-model="selectedWorkplace" ng-keyup="listAllWorkplace(selectedWorkplace)" class="form-control" ng-model-options="{'debounce': 300}" uib-typeahead="dataWorkplace as dataWorkplace.name for dataWorkplace in fWorkplace | filter: $viewValue | limitTo: 10" typeahead-show-hint="true" typeahead-loading="loadingWorkplace" typeahead-no-results="noResultsWorkplace" typeahead-on-select="onSelectWorkplace($item, $model, $label); selectedWorkplace = ''">
+                            <div ng-show="noResultsWorkplace">
+                                <i class="glyphicon glyphicon-remove"></i> Sem resultados
+                            </div>
+                            <div ng-show="loadingWorkplace">
+                                <i class="glyphicon glyphicon-refresh"></i> Buscando
+                            </div>
+                        </div>
+                        <div class="input-group m-b">
+                            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input placeholder="{{'PERSONS' | translate}}" type="text" ng-model="selectedPerson" ng-keyup="listAllPerson(selectedPerson)" class="form-control" ng-model-options="{'debounce': 300}" uib-typeahead="dataPerson as dataPerson.name for dataPerson in fPerson | filter: $viewValue | limitTo: 10" typeahead-show-hint="true" typeahead-loading="loadingPerson" typeahead-no-results="noResultsPerson" typeahead-on-select="onSelectPerson($item, $model, $label); selectedPerson = ''">
+                            <div ng-show="noResultsPerson">
+                                <i class="glyphicon glyphicon-remove"></i> Sem resultados
+                            </div>
+                            <div ng-show="loadingWorkplace">
+                                <i class="glyphicon glyphicon-refresh"></i> Buscando
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="filters">
+                    <div class="filter_item" data-type="{data_type}" data-id="{data_id}">
+                        <a href=""><i class="{data_fafa}" aria-hidden="true"></i><span class="item_break">{second_label}</span><span>{main_label}</span><i class="fa fa-close item_close" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hbox filter_button">           
+                <a href="" ng-click="applyFilter($event)" class="btn btn-dark button_link">Filtrar </a>
+            </div>
+        </div>
+    </div>
+</div>

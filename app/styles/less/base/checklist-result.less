@@ -1,0 +1,40 @@
+.checklist-results{
+    .nav{
+        border: none;
+        background: @brand-white;
+        li{
+            a{
+                border: none;
+            }
+        }
+    }
+    .card-people{
+        border: 1px solid @brand-gray-3;
+        padding: 10px;
+        margin: 15px 0;
+        line-height: 1;
+        .avatar{
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+            img{
+                width: 80px;
+            }
+        }
+    }
+    .btn-dark{
+        margin-top: 7px;
+    }
+    .active{
+        color: @brand-dark;
+        &:before{
+            content: "";
+            border-top: 3px solid @brand-orange;
+            position: absolute;
+            top: -2px;
+            z-index: 9999;
+            width: 100%;
+            left: 0;
+        }
+    }
+}

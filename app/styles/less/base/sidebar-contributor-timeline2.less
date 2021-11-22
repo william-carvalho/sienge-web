@@ -1,0 +1,102 @@
+.panel.__sidebar.timeline, .panel.__sidebar.timeline2  {
+    .panel-heading {
+        .title_content{
+            margin-top: 5px;
+        }
+    }
+}
+.panel.__sidebar.timeline3  {
+    .panel-heading {
+        .title_content{
+            margin-top: 10px;
+        }
+    }
+}
+
+.timeline2{
+    .nav_dropdown {
+        max-width: none;
+    }
+    .title_content{
+        margin-top: 5px;
+    }
+    .sl-item{
+        position: relative;
+        padding-left: 25px;
+        margin-left: 60px;
+        padding-bottom: 30px;
+        &:after{
+            width: 12px;
+            height: 12px;
+            left: -1px;
+        }
+    }
+    .side-markers{
+        position: absolute;
+        left: -80px;
+        top: 16px;
+        width: 65px;
+        text-align: right;
+        .marker-type{
+            word-break: break-all;
+        }
+    }
+    .marker-type{
+        font-weight: bold;
+        input:checked + .marker-content{
+            color: @brand-white;
+            background: #4F487C;
+            border: 1px solid transparent;
+        }
+        .marker-content{
+            font-weight: bold;
+            cursor: pointer;
+        }
+        &.__violet{
+            .marker-content{
+                color: #4F487C;
+            }
+            input:checked + .marker-content{
+                background: #4F487C;
+            }
+        }
+        &.__green{
+            .marker-content{
+                color:#1C998B;
+            }
+            input:checked + .marker-content{
+                background: #1C998B;
+            }
+        }
+        &.__red{
+            .marker-content{
+                color:#D7263E;
+            }
+            input:checked + .marker-content{
+                background: #D7263E;
+            }
+        }
+        input{
+            display: none;
+        }
+    }
+    .underline{
+        color: @brand-black;
+        border-bottom: 1px solid @brand-black;
+        margin-right: 10px;
+    }
+    .name{
+        span{
+            font-weight: normal;
+        }
+    }
+    .comment_content{
+        padding-left: 30px;
+        p{
+            margin: 0;
+        }
+        .name{
+            margin-left: 5px;
+        }
+    }
+}

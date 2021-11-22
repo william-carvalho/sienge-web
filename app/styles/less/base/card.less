@@ -1,0 +1,62 @@
+.big-card {
+    .panel-heading{
+        padding: 5px 15px;
+        .header{
+            cursor: pointer;
+            &:hover {
+                .icon i, .pos .title h4 {
+                    color: darken(@brand-gray-7, 10%);
+                }
+                .pos small {
+                    color: darken(#b1b1b1, 10%);
+                }
+            }
+            .icon{
+                i{
+                    padding: 10px 10px 0 0;
+                    width: 30px;
+                    color: @brand-gray-7;
+                }
+
+            }
+            .pos{
+                position: relative;
+                .title{
+                    margin: 0;
+                    .content{
+                        margin: 0;
+                        color: @brand-gray-7;
+
+                        font-size: .6em;
+                    }
+                }
+                .state{
+                    position: absolute;
+                    top: 3px;
+                    right: 0;
+                    a{
+                        &.__panic{
+                            display: block;
+                        }
+                        &.__alert{
+                            display: none;
+                        }
+                    }
+                }
+                .option{
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    a{
+                        color: @brand-gray-7;
+                    }
+                }
+            }
+        }
+    }
+
+    .panel-body {
+      height: 280px;
+      padding: 0;
+    }
+}

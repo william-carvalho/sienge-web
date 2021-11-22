@@ -1,0 +1,64 @@
+.base-info{
+
+  padding: 0;
+
+	.col{
+		vertical-align: middle;
+	}
+  .col-icon {
+    width: 30px;
+    position: relative;
+
+    i,
+    img {
+      margin-left: 10px;
+    }
+
+    &.device {
+      cursor: pointer;
+      padding-left: 30px;
+      padding-right: 20px;
+      img{
+          margin-left: 0;
+      }
+    }
+  }
+  .text_content{
+    padding: 10px;
+    line-height: 1;
+    border-right: 1px solid @brand-gray-5;
+    text-align: left;
+
+    &:last-of-type {
+      border-right: 0;
+    }
+
+    &.__service {
+      width: 140px;
+    }
+    &.__device {
+      width: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+  }
+  .status_icon {
+    display: block;
+    background-color: @brand-success;
+    bottom: 6px;
+    border-color: #FFFFFF;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+  }
+
+  &.__error {
+    .status_icon {
+      background-color: @brand-panic;
+    }
+  }
+
+}

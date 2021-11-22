@@ -1,0 +1,66 @@
+.docs{
+    .panel-body{
+        padding: 15px !important;
+    }
+    .sub_heading{
+        padding: 10px 20px !important;
+        margin-left: 0 !important;
+        margin-top: 5px;
+        &.__dark{
+            background: #CFD6DA;
+            padding: 3px 20px !important;
+        }
+    }
+    .text_content{
+        display: inline-block;
+    }
+    .number{
+        display: inline-block;
+        margin: 0;
+        float: right;
+        padding-top: 7px;
+    }
+    .orange{
+        color: @brand-orange;
+    }
+    .card_docs{
+        height: 110px;
+        margin: 10px 0;
+        border: 1px solid @brand-gray-4;
+        transition: all .25s;
+        cursor: pointer;
+        max-width: 140px;
+        &:hover{
+            background: @brand-gray-3;
+        }
+        &.__selected{
+            border: 1px solid @brand-orange;
+        }
+        small{
+            text-align: right;
+            display: block;
+            padding: 5px;
+        }
+        p{
+            display: block;
+            text-align: center;
+            padding: 5px 0;
+            margin: 0;
+        }
+        a{
+            display: block;
+            text-align: center;
+            padding-bottom: 5px;
+            font-family: @font-family-sans-serif;
+        }
+        .update{
+            color: @brand-orange;
+            i{
+                padding-right: 5px;
+            }
+        }
+        .add_button{
+            padding: 19px 0;
+        }
+    }
+}

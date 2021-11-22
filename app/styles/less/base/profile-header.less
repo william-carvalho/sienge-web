@@ -1,0 +1,93 @@
+.profile {
+
+    .profile-header {
+        .profile-data-wrapper {
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            .action-edit {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                font-size: 20px;
+                cursor: pointer;
+                &:hover {
+                    color: darken(#717171, 10%);
+                }
+            }
+            .header-image-wrapper {
+                text-align: center;
+                img {
+                    width: 60%;
+                    height: auto;
+                    border: 5px solid @brand-orange;
+                    border-radius: 50%;
+                    max-width: 200px;
+                }
+            }
+
+            .profile-info-wrapper {
+                max-width: 900px;
+            }
+            .profile-name {
+                border-bottom: 1px solid black;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .profile-data {
+                p {
+                    position: relative;
+                    padding-left: 35px;
+                    .fa, img {
+                        height: 20px;
+                        width: 20px;
+                        position: absolute;
+                        left: 0;
+                        font-size: 18px;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+
+    }
+
+
+    .navigation-wrapper {
+        ul.nav {
+            margin-left: 50px;
+            li {
+                display: inline-block;
+                border-top: 3px solid white;
+                font-size: 20px;
+                &:hover {
+                    border-color: rgba(0, 0, 0, 0.05);
+                }
+                &.active, &.active:hover {
+                    border-color: @brand-orange;
+                    a {
+                        background-color: inherit;
+                        color: black;
+                    }
+
+                }
+
+                a {
+                    padding: 30px 15px;
+                    color: @brand-gray-3;
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+}

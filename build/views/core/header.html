@@ -1,0 +1,129 @@
+<!-- navbar header -->
+<div class="navbar-header">
+  <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+    <i class="glyphicon glyphicon-cog"></i>
+  </button>
+  <button class="pull-right visible-xs" ui-toggle-class="off-screen" data-target=".app-aside" ui-scroll-to="app">
+    <i class="glyphicon glyphicon-align-justify"></i>
+  </button>
+  <!-- brand   app-aside-folded-->
+  <a href="#/" class="navbar-brand text-lt">
+    <!-- <i class="fa fa-btc"></i> -->
+    <img src="images/logo_orange.png" alt="." class="hidden-folded">
+    <img src="images/logo_small.png" class="logo-small" alt="." class="hidden-xs">
+    <!-- <span class="hidden-folded m-l-xs">{{app.name}}</span> -->
+  </a>
+  <!-- / brand -->
+</div>
+<!-- / navbar header -->
+
+<!-- navbar collapse -->
+<div class="collapse pos-rlt navbar-collapse box-shadow {{app.settings.navbarCollapseColor}}">
+  <!-- buttons -->
+  <div class="nav navbar-nav hidden-xs">
+    <a class="btn no-shadow navbar-btn btn-fold" ng-click="toggleNavSidebar()">
+      <i class="fa {{app.settings.asideFolded ? 'fa-indent' : 'fa-dedent'}} fa-fw"></i>
+    </a>
+  </div>
+  <!-- / buttons -->
+
+  <!-- link and dropdown -->
+
+  <!-- / link and dropdown -->
+  <!-- nabar right -->
+  <ul class="nav navbar-nav navbar-right">
+
+    <li>
+      <a href class="btn no-shadow" ui-toggle-class="show" target="#aside-user" ng-click="openNotifications($event)">
+        <i class="icon-user fa-fw"></i>
+      </a>
+    </li>
+    <!-- <li class="hidden-xs">
+    <a ui-fullscreen></a>
+  </li> -->
+  <li class="dropdown nav-alerts js-notifications">
+    <a href="" class="dropdown-toggle" ng-click="openNotifications($event)">
+      <i class="icon-bell fa-fw"></i>
+      <span class="visible-xs-inline">Notifications</span>
+      <span class="badge badge-sm up bg-danger pull-right-xs">{{occurrence.content.length}}</span>
+    </a>
+    <!-- dropdown -->
+    <div class="dropdown-menu w-xl animated fadeInUp">
+      <div class="panel bg-white">
+        <div class="list-group"  ng-repeat="o in occurrence.content | limitTo: 4">
+          <a href class="list-group-item">
+            <span class="pull-left m-r icon">
+              <img ng-src="images/state_{{o.state}}.png" alt="..." class="img-circle">
+            </span>
+            <span class="clear block m-b-none">
+              <h3 class="title_content">Posto {{o.id}}</h3>
+              <small class="text-muted">Adicionado as {{o.time}} - {{o.date}}</small><br>
+              <small class="text-muted small">{{o.workplacePhone}}</small>
+            </span>
+          </a>
+        </div>
+        <div class="panel-footer text-sm">
+          <a href="#notes" data-toggle="class:show animated fadeInRight" class="link">Ver todos</a>
+        </div>
+      </div>
+    </div>
+    <!-- / dropdown -->
+  </li>
+  <li class="dropdown">
+    <a href class="dropdown-toggle clear" ng-click="openNotifications($event)">
+      <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+        <img class="js-user-image" src="images/a0.jpg" alt="...">
+        <i class="on md b-white bottom"></i>
+      </span>
+      <span class="hidden-sm hidden-md">{{loggedUser.name}}</span> <b class="caret"></b>
+    </a>
+    <!-- dropdown -->
+    <ul id="user-dropdown" class="dropdown-menu animated fadeInRight w">
+      <!-- <li class="wrapper b-b m-b-sm  m-t-n-xs"> -->
+      <li class="wrapper m-b-sm  m-t-n-xs">
+        <div>
+          <p>{{loggedUser.name}}</p>
+          <!-- <p>{{loggedUser.name}}</p> -->
+        </div>
+        <!-- <progressbar value="60" class="progress-xs m-b-none bg-white"></progressbar> -->
+      </li>
+      <li>
+        <a href>
+          <!-- <span class="badge bg-danger pull-right">30%</span> -->
+          <span>Configurações</span>
+        </a>
+      </li>
+      <li>
+        <a ng-href="/#/profile">Meu Perfil</a>
+      </li>
+      <!-- <li>
+      <a ui-sref="app.docs">
+      <span class="label bg-info pull-right">new</span>
+      Help
+    </a>
+  </li> -->
+  <li class="divider"></li>
+  <li>
+    <a href ng-click="logout()">Sair</a>
+  </li>
+</ul>
+<!-- / dropdown -->
+</li>
+</ul>
+<!-- / navbar right -->
+
+<form class="navbar-form navbar-form-sm navbar-right shift ng-scope" ui-shift="prependTo" target=".navbar-collapse" role="search">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control input-sm bg-light no-border rounded padder ng-pristine ng-valid" placeholder="Buscar..." aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-00G-5636"><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen()" ng-style="{top: position.top+'px', left: position.left+'px'}" style="display: block;;display: block;" role="listbox" aria-hidden="true" typeahead-popup="" id="typeahead-00G-5636" matches="matches" active="activeIdx" select="select(activeIdx)" query="query" position="position">
+        <!-- ngRepeat: match in matches track by $index -->
+      </ul>
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </div>
+</form>
+
+</div>
+<!-- / navbar collapse -->
